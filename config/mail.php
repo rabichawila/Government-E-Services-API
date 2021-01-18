@@ -33,16 +33,14 @@ return [
     |
     */
 
-
     'mailers' => [
-
         'smtp' => [
             'transport' => 'smtp',
-            'host' => 'mail.pricemate.info',
-            'port' => 587,
-            'encryption' => 'tls',
-            'username' => 'noreply@pricemate.info',
-            'password' => 'tq3599hK59sW6p2u',
+            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'port' => env('MAIL_PORT', 587),
+            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
             'auth_mode' => null,
         ],
