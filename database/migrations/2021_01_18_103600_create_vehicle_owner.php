@@ -16,7 +16,7 @@ class CreateVehicleOwner extends Migration
         Schema::create('vehicle_owners', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('vehicle_id');
-            $table->foreign('vehicle_id')->references('id')->on('vehicle');
+            $table->foreign('vehicle_id')->references('id')->on('vehicles');
 
             $table->string('names');
             $table->date('date_of_birth');
